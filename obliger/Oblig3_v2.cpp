@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
 
-struct Fraction {                     //fraction struct with nominator &
-  int numerator, denominator;         //denominator as integers
+struct Fraction {                       //fraction struct with nominator &
+  int numerator, denominator;           //denominator as integers
 };
 
 int main() {
-  Fraction frac[3];                   //create 3 fraction arrays
-  Fraction temp1, temp2, sum;         //temporary holds the fractions
-  char choice, operation, choiceToUpper;//holds user choices and math operation
-
+  Fraction frac[3];                     //create 3 fraction arrays
+  Fraction temp1, temp2, sum;           //temporary holds the fractions
+  char choice, operation, choiceToUpper;//holds user choices and math
+                                        //operations
   for(int i = 0; i < 3; i++) {       //ask user to enter fraction numerator
     cout << "Fraction " << i+1 << ":" << "\n\tNumerator: ";
     cin >> frac[i].numerator;
     do {                             //ask user to enter fraction denominator
       cout << "\tDenominator(not 0): ";
       cin >> frac[i].denominator;
-    }while(frac[i].denominator == 0);//ask again if input is 0(can be negative)
+    }while(frac[i].denominator == 0);//ask again if input is 0 (- ok)
   }//end for loop
                                      //print guidelines
   cout << "\n\nFraction operators:\n" << "\tA - fraction 1 & fraction 2\n"
@@ -33,11 +33,11 @@ int main() {
 while(choiceToUpper != 'Q'){
 
   switch(choiceToUpper) {
-    case 'A' : temp1 = frac[0]; temp2 = frac[1]; break;//store fractions in temp
-    case 'B' : temp1 = frac[0]; temp2 = frac[2]; break;//for use in calculations
-    case 'C' : temp1 = frac[1]; temp2 = frac[2]; break;//without tampering with
-  }                                                    //the original values
-  
+    case 'A' : temp1 = frac[0]; temp2 = frac[1]; break;//store fractions in
+    case 'B' : temp1 = frac[0]; temp2 = frac[2]; break;//temp for use in
+    case 'C' : temp1 = frac[1]; temp2 = frac[2]; break;//calculations without
+  }                                                    //tampering with the
+                                                       //original values
   do {
     cout << "Desired operation(+, -, *, /):  ";
     cin >> operation;             //only allow +,-,*,/ operators
