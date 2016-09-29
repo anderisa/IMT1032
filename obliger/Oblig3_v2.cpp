@@ -50,37 +50,27 @@ while(choiceToUpper != 'Q'){
       sum.numerator = (temp1.numerator * temp2.denominator) + 
                        (temp1.denominator * temp2.numerator);
       sum.denominator = (temp1.denominator * temp2.denominator);
-      cout << "Answer is: " << temp1.numerator << "/" 
-           << temp1.denominator << " + " << temp2.numerator << "/"
-           << temp2.denominator << " = " << sum.numerator << "/"
-           << sum.denominator << "\n\n";
     break;//end addition
     case '-': //subtraction operation
       sum.numerator = (temp1.numerator * temp2.denominator) - 
                        (temp1.denominator * temp2.numerator);
       sum.denominator = (temp1.denominator * temp2.denominator);
-      cout << "Answer is: " << temp1.numerator << "/" 
-           << temp1.denominator << " - " << temp2.numerator << "/"
-           << temp2.denominator << " = " << sum.numerator << "/"
-           << sum.denominator << "\n\n";
     break;//end subtracion
     case '*': //multiply operation
       sum.numerator = (temp1.numerator) * (temp2.numerator);
       sum.denominator = (temp1.denominator) * (temp2.denominator);
-      cout << "Answer is: " << temp1.numerator << "/" 
-           << temp1.denominator << " * " << temp2.numerator << "/"
-           << temp2.denominator << " = " << sum.numerator << "/"
-           << sum.denominator << "\n\n";
     break;//end multiply
     case '/': //divide operation
       sum.numerator = (temp1.numerator) * (temp2.denominator);
       sum.denominator = (temp1.denominator) * (temp2.numerator);
-      cout << "Answer is: " << temp1.numerator << "/" 
-           << temp1.denominator << " / " << temp2.numerator << "/"
-           << temp2.denominator << " = " << sum.numerator << "/"
-           << sum.denominator << "\n\n";
     break;//end division
   }//end switch
+
+  cout << "Answer is: " << temp1.numerator << "/" 
+           << temp1.denominator << " " <<operation << " "
+           << temp2.numerator << "/"
+           << temp2.denominator << " = " << sum.numerator << "/"
+           << sum.denominator << "\n\n";
 
   do {
     cout << "Your choice(A/B/C/Q):\t";         //ask user for choice
@@ -91,6 +81,5 @@ while(choiceToUpper != 'Q'){
         choiceToUpper != 'C' && choiceToUpper != 'Q');
 }
 cout << "\nHave a nice day!\n\n";//program exit with nice message
-
 return 0;
 }
